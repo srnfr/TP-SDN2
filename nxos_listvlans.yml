@@ -7,13 +7,13 @@
   vars:
 
     ansible_network_os: cisco.nxos.nxos
-    ansible_ssh_port: 8181
+    ansible_ssh_port: 22
     ansible_user: admin
-    ansible_password: "{{ password}}"
+    ansible_password: "{{ password }}"
     ansible_become: yes
     ansible_become_method: enable
     ansible_connection: ansible.netcommon.network_cli
-    ansible_command_timeout: 60
+    ansible_command_timeout: 120
     
   vars_prompt:
     - name: password
